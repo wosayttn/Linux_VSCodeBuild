@@ -8,7 +8,7 @@ This directory forms an automated Continuous Integration (CI) and local building
 This is your primary entry point and orchestrator script. When executed, it handles the following automatically:
 - **Dependency Auto-Provisioning:** Dynamically detects and installs essential OS-level dependencies (`jq`, `git`, `python3`, `pip3`).
 - **Toolchain Procurement:** Verifies, clones, and bootstraps Microsoft's `vcpkg` as well as Arm's official `armlm` license manager straight from origin if they are missing.
-- **Arm License Enrollment:** Uses `armlm` to automatically activate/reactivate the `KEMDK-NUV1` free non-commercial AC6 toolchain license.
+- **Arm License Enrollment:** Uses `armlm` to automatically activate/reactivate the `KEMDK-NUV1` commercial-use AC6 toolchain license.
 - **Python Prerequisites:** Satisfies pip dependencies dictated within `requirements.txt` specifically needed by underlying build tools.
 - **BSP Source Code Sync:** Intelligently checks if your specific Target Framework (e.g., `M3351BSP`) exists. If missing, it uses `git clone` to retrieve it, otherwise, it gracefully ensures it is up to date utilizing `git pull`.
 - **Iterative Compilation & Analysis:** Hunts for every individual `.csolution.yml` file deep inside the BSP's `SampleCode` folder, cleanly fires off `vcpkg_build_linux.sh` for each, redirects the raw outcome into isolated log entries (`.txt`), sweeps the log aggressively leveraging `vcpkg_blacklist_check.sh`, flags results to standard output gracefully, and cleanly audits any compilation deviations at the very end.
