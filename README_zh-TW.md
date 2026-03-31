@@ -1,6 +1,6 @@
 # VCPKG Build Subsystem for NuMicro BSP
 
-[English](README.md) | [繁體中文](README_zh-TW.md)
+[English](README.md) | [繁體中文](README_zh-TW.md) | [简体中文](README_zh-CN.md) | [日本語](README_ja.md) | [한국어](README_ko.md)
 
 本目錄為 NuMicro 採用 CMSIS 架構且專為 VCPKG (`.csolution.yml`) 精心打造的專案，提供了一個自動化的持續整合 (CI) 與本地建置工具鏈協調程式。此工具可在 Linux 平台上自動完成 Nuvoton 板級支援包 (BSP) 專案的取得、準備、驗證及編譯。
 
