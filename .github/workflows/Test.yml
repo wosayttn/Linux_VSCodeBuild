@@ -20,6 +20,7 @@ jobs:
         shell: bash
         run: |
           REPO_ROOT="$GITHUB_WORKSPACE"
+          (cd $REPO_ROOT | ./autobuild.sh)
 
       - name: Collect artifacts with directory structure
         run: |
