@@ -1,0 +1,22 @@
+name: Test
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Installation basic programs
+          sudo apt-get update
+          sudo apt-get install -y python3 python3-pip python-is-python3
+
+      - name: Activate & Build each csolution
+        shell: bash
+        run: |
+          REPO_ROOT="$GITHUB_WORKSPACE"
+          ( cd $REPO_ROOT | ./autobuild.sh )
