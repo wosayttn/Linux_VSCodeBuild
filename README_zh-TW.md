@@ -48,8 +48,8 @@ flowchart TD
     K --> L[將標準輸出重新導向至專案日誌 .txt]
     L --> M[呼叫 vcpkg_blacklist_check.sh]
     M --> N{日誌內是否有黑名單錯誤?}
-    N -- 是 --> O[標記為失敗 (Failed)]
-    N -- 否 --> P[標記為成功 (Success)]
+    N -- 是 --> O["標記為失敗 (Failed)"]
+    N -- 否 --> P["標記為成功 (Success)"]
     O --> H
     P --> H
     H -- 執行完畢 --> Q{建置過程中是否有任何失敗?}
