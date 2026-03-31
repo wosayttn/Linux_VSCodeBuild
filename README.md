@@ -1,4 +1,4 @@
-# Linux VCPKG Build Subsystem for NuMicro BSP
+# VCPKG Build Subsystem for NuMicro BSP
 
 [English](README.md) | [繁體中文](README_zh-TW.md)
 
